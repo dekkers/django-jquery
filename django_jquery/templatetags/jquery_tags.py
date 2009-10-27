@@ -14,10 +14,8 @@ FILES = {
 }
 
 @register.simple_tag
-def jquery_requirements():
-    print "jquery_requirements"
+def require_jquery():
     url = "%s/%s" % (getattr(settings, "APPS_MEDIA_URL", {}), APP_NAME)
-    print "url: ", url
     L = []
     for css in FILES['css']:
         path = os.path.normpath("%s/css/%s" % (url, css))
@@ -25,8 +23,5 @@ def jquery_requirements():
     for js in FILES['js']:
         path = os.path.normpath("%s/%s" % (url, js))
         L.append('<script type="text/javascript" src="%s"></script>' % path)
- 
-    print L
-
 
     return "\n".join(L)
