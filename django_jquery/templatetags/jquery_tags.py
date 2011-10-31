@@ -9,4 +9,4 @@ def include_jquery():
     url = getattr(settings, 'MEDIA_URL')
     if hasattr(settings, 'STATIC_URL'):
         url = getattr(settings, 'STATIC_URL')
-    return "<script type='text/javascript' src='%s'></script>" % os.path.join(url, 'jquery', 'jquery-1.4.3.min.js')
+    return "<script type='text/javascript' src='%s'></script>" % os.path.join(url, 'jquery', 'jquery-1.6.4.min.js')
