@@ -6,7 +6,4 @@ register = template.Library()
 
 @register.simple_tag
 def include_jquery():
-    url = getattr(settings, 'MEDIA_URL')
-    if hasattr(settings, 'STATIC_URL'):
-        url = getattr(settings, 'STATIC_URL')
-    return "<script type='text/javascript' src='%s'></script>" % os.path.join(url, 'jquery', 'jquery-1.6.4.min.js')
+    return "<script type='text/javascript' src='%s'></script>" % os.path.join(getattr(settings, 'STATIC_URL'), 'jquery', 'jquery-1.6.4.min.js')
