@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'django-jquery',
-    version = '0.2',
+    version = '1.7.2',
     description = "Django app - bundles jQuery for django-staticfiles",
     long_description = open('README.rst').read(),
     author = 'Aljosa Mohorovic',
